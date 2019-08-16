@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=2]
 
-[ext_resource path="res://Swordsman.gd" type="Script" id=1]
+[ext_resource path="res://player/Swordsman.gd" type="Script" id=1]
 [ext_resource path="res://assets/Swordsman/Body Parts/Torso.png" type="Texture" id=2]
 [ext_resource path="res://assets/Swordsman/Body Parts/Head.png" type="Texture" id=3]
 [ext_resource path="res://assets/Swordsman/Body Parts/Hair_0.png" type="Texture" id=4]
@@ -25,7 +25,9 @@
 [ext_resource path="res://assets/Swordsman/Body Parts/Leg.L.png" type="Texture" id=23]
 [ext_resource path="res://assets/Swordsman/Body Parts/LowerLeg.L.png" type="Texture" id=24]
 [ext_resource path="res://assets/Swordsman/Body Parts/Foot.L.png" type="Texture" id=25]
-[ext_resource path="res://PlayerSword.tscn" type="PackedScene" id=26]
+[ext_resource path="res://player/PlayerSword.tscn" type="PackedScene" id=26]
+
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "Idle"
