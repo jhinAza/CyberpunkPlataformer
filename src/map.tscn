@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://map.gd" type="Script" id=2]
 [ext_resource path="res://assets/Enviroment and Props/Computers/Computer-Operating-Helper-Desk.png" type="Texture" id=3]
 [ext_resource path="res://map_resources/Coin.tscn" type="PackedScene" id=4]
 [ext_resource path="res://player/Swordsman.tscn" type="PackedScene" id=5]
-
+[ext_resource path="res://assets/Building Set/Loopable Background/Background-Night.png" type="Texture" id=6]
+[ext_resource path="res://assets/Building Set/Loopable Background/Citiy-Lights.png" type="Texture" id=7]
+[ext_resource path="res://assets/Building Set/Loopable Background/Moon-Night.png" type="Texture" id=8]
+[ext_resource path="res://assets/Building Set/Loopable Background/City-Block.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1880, 1380 )
@@ -50,5 +53,105 @@ position = Vector2( 2230, 1680 )
 position = Vector2( 180, 760 )
 scale = Vector2( 0.8, 0.8 )
 z_index = 3
-run_speed = 400
 jump_speed = -800
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Background-Night" type="Sprite" parent="ParallaxBackground"]
+editor/display_folded = true
+position = Vector2( 960, 540 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 6 )
+
+[node name="Citiy-Lights" type="Sprite" parent="ParallaxBackground/Background-Night"]
+position = Vector2( -670, 530 )
+texture = ExtResource( 7 )
+offset = Vector2( -10, -220 )
+
+[node name="Citiy-Lights2" type="Sprite" parent="ParallaxBackground/Background-Night/Citiy-Lights"]
+rotation = 0.415883
+texture = ExtResource( 7 )
+offset = Vector2( -10, -220 )
+
+[node name="Citiy-Lights3" type="Sprite" parent="ParallaxBackground/Background-Night/Citiy-Lights"]
+rotation = -0.423896
+scale = Vector2( 1, 1 )
+texture = ExtResource( 7 )
+offset = Vector2( -10, -220 )
+
+[node name="Citiy-Lights4" type="Sprite" parent="ParallaxBackground/Background-Night/Citiy-Lights"]
+rotation = -0.823898
+texture = ExtResource( 7 )
+offset = Vector2( -10, -220 )
+
+[node name="Citiy-Lights5" type="Sprite" parent="ParallaxBackground/Background-Night/Citiy-Lights"]
+rotation = 0.869691
+texture = ExtResource( 7 )
+offset = Vector2( -10, -220 )
+
+[node name="Citiy-Lights2" type="Sprite" parent="ParallaxBackground/Background-Night"]
+position = Vector2( -10.0001, 530 )
+texture = ExtResource( 7 )
+offset = Vector2( -10, -220 )
+
+[node name="Citiy-Lights2" type="Sprite" parent="ParallaxBackground/Background-Night/Citiy-Lights2"]
+rotation = 0.415883
+texture = ExtResource( 7 )
+offset = Vector2( -10, -220 )
+
+[node name="Citiy-Lights3" type="Sprite" parent="ParallaxBackground/Background-Night/Citiy-Lights2"]
+rotation = -0.423896
+scale = Vector2( 1, 1 )
+texture = ExtResource( 7 )
+offset = Vector2( -10, -220 )
+
+[node name="Citiy-Lights4" type="Sprite" parent="ParallaxBackground/Background-Night/Citiy-Lights2"]
+rotation = -0.823898
+texture = ExtResource( 7 )
+offset = Vector2( -10, -220 )
+
+[node name="Citiy-Lights5" type="Sprite" parent="ParallaxBackground/Background-Night/Citiy-Lights2"]
+rotation = 0.869691
+texture = ExtResource( 7 )
+offset = Vector2( -10, -220 )
+
+[node name="Citiy-Lights3" type="Sprite" parent="ParallaxBackground/Background-Night"]
+position = Vector2( 610, 530 )
+texture = ExtResource( 7 )
+offset = Vector2( -10, -220 )
+
+[node name="Citiy-Lights2" type="Sprite" parent="ParallaxBackground/Background-Night/Citiy-Lights3"]
+rotation = 0.415883
+texture = ExtResource( 7 )
+offset = Vector2( -10, -220 )
+
+[node name="Citiy-Lights3" type="Sprite" parent="ParallaxBackground/Background-Night/Citiy-Lights3"]
+rotation = -0.423896
+scale = Vector2( 1, 1 )
+texture = ExtResource( 7 )
+offset = Vector2( -10, -220 )
+
+[node name="Citiy-Lights4" type="Sprite" parent="ParallaxBackground/Background-Night/Citiy-Lights3"]
+rotation = -0.823898
+texture = ExtResource( 7 )
+offset = Vector2( -10, -220 )
+
+[node name="Citiy-Lights5" type="Sprite" parent="ParallaxBackground/Background-Night/Citiy-Lights3"]
+rotation = 0.869691
+texture = ExtResource( 7 )
+offset = Vector2( -10, -220 )
+
+[node name="Moon-Night" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 1400, 20 )
+scale = Vector2( 0.518154, 0.530886 )
+texture = ExtResource( 8 )
+
+[node name="City-Block" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 1191.27, 691.842 )
+scale = Vector2( 1.02018, 1.22345 )
+texture = ExtResource( 9 )
+
+[node name="City-Block2" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 1730, 780 )
+scale = Vector2( 0.679221, 0.929185 )
+texture = ExtResource( 9 )
