@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-export var base_speed: int
-
 export (int) var run_speed = 100
 export (int) var jump_speed = -400
 export (int) var gravity = 1200
@@ -17,9 +15,10 @@ func get_input():
 	var left = Input.is_action_pressed('ui_left')
 	var jump = Input.is_action_just_pressed('ui_up')
 	
-	if jump and is_on_floor():
-		jumping = true
-		velocity.y = jump_speed
+	if jump:
+		if is_on_floor():
+			jumping = true
+			velocity.y = jump_speed
 	if right:
 		velocity.x += run_speed
 	if left:
@@ -36,22 +35,14 @@ func _process_animation():
 		$AnimationPlayer.play('Jump')
 	
 func _set_facing():
-	#print(self.scale.x)
-	#print(self.velocity.x)
-	print(self.facing)
 	if velocity.x > 0 and self.facing == -1:
-		print("Turn right")
-		#self.apply_scale(Vector2(-1, 1))
 		self._turn()
-		self.facing = 1
 	elif velocity.x < 0 and self.facing == 1:
-		print("turn left")
-		#self.apply_scale(Vector2(-1, 1))
 		self._turn()
-		self.facing = -1
 
 func _turn():
 	$Torso.scale.x = -$Torso.scale.x
+	self.facing = -self.facing
 
 func coin_found():
 	self.coins = self.coins + 1
