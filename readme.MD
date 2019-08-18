@@ -22,9 +22,19 @@ The objective of this game is to collect all coins in the level without being ca
 3. End game objective
 4. Enemies with movement pattern
 
+## Known Issues
+
+[Issues](https://github.com/jhinAza/CyberpunkPlataformer/issues)
+
 ## Credits:
 [Tileset](https://www.gamedevmarket.net/asset/platformer-game-tile-set-12-359/)
 
 [Character](https://www.gamedevmarket.net/asset/character-sprites-set-3833/)
 
 [Engine](https://godotengine.org/)
+
+## Contact
+
+[email](mailto:juliand1993@gmail.com)
+
+[linkedin](www.linkedin.com/in/juliandiez)
