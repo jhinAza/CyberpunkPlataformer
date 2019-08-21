@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://map.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/Building Set/Loopable Background/Moon-Night.png" type="Texture" id=8]
 [ext_resource path="res://assets/Building Set/Loopable Background/City-Block.png" type="Texture" id=9]
 [ext_resource path="res://map_resources/MovingPlatform.tscn" type="PackedScene" id=10]
+[ext_resource path="res://map_resources/Camera.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1880, 1380 )
@@ -69,7 +70,6 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="Background-Night" type="Sprite" parent="ParallaxBackground"]
 editor/display_folded = true
@@ -169,3 +169,7 @@ texture = ExtResource( 9 )
 [node name="MovingPlatform" parent="." instance=ExtResource( 10 )]
 position = Vector2( 3072, 768 )
 move_to = Vector2( 0, 2310 )
+
+[node name="Camera" parent="." instance=ExtResource( 11 )]
+position = Vector2( 4864, 1504 )
+scale = Vector2( -1, 1 )

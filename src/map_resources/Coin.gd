@@ -13,5 +13,5 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	emit_signal("player_entered")
-	get_tree().call_group("Player", "coin_found")
+	get_tree().call_group("GameEvents", "coin_found")
 	get_tree().queue_delete(self)

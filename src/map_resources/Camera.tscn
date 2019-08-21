@@ -1,0 +1,92 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://map_resources/Camera.gd" type="Script" id=1]
+[ext_resource path="res://assets/Enviroment and Props/Security Camera/Cam-Holder.png" type="Texture" id=2]
+[ext_resource path="res://assets/Enviroment and Props/Security Camera/Cam-Body.png" type="Texture" id=3]
+[ext_resource path="res://assets/Enviroment and Props/light.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=3]
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Holder:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 80, 40 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Holder:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Body:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 144, -8 ), Vector2( 144, -8 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Body:rotation_degrees")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 17.6065, -17.819 ]
+}
+
+[node name="Camera" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Holder" type="Sprite" parent="."]
+position = Vector2( 80, 40 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="Body" type="Sprite" parent="."]
+position = Vector2( 144, -8 )
+rotation = 0.307291
+texture = ExtResource( 3 )
+offset = Vector2( 32, -32 )
+flip_h = true
+
+[node name="Ray" type="RayCast2D" parent="Body"]
+enabled = true
+cast_to = Vector2( 1024, 0 )
+collision_mask = 2
+
+[node name="Light" type="Light2D" parent="Body"]
+position = Vector2( 112.915, 7.28479 )
+rotation = -1.51602
+scale = Vector2( 1, 1.86177 )
+texture = ExtResource( 4 )
+offset = Vector2( 1.14441e-005, 256 )
+range_layer_min = -6
+shadow_color = Color( 0, 0, 0, 0.133333 )
+shadow_gradient_length = 150.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Working"
+anims/Working = SubResource( 3 )

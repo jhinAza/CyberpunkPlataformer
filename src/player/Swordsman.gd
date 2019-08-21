@@ -44,10 +44,6 @@ func _turn():
 	$Torso.scale.x = -$Torso.scale.x
 	self.facing = -self.facing
 
-func coin_found():
-	self.coins = self.coins + 1
-	print("Tenemos %s monedas" % self.coins)
-
 func _physics_process(delta):
 	get_input()
 	self._process_animation()
