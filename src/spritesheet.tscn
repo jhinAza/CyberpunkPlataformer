@@ -88,6 +88,7 @@ position = Vector2( -128, 128 )
 
 [node name="curve_top_left" type="Sprite" parent="."]
 editor/display_folded = true
+light_mask = 2
 position = Vector2( 256, 0 )
 texture = ExtResource( 1 )
 
@@ -98,6 +99,7 @@ polygon = PoolVector2Array( -128, 128, 128, 128, 128, -128, -96, -128, -128, -10
 
 [node name="curve_top_right" type="Sprite" parent="."]
 editor/display_folded = true
+light_mask = 2
 position = Vector2( 520, 0 )
 texture = ExtResource( 2 )
 
@@ -108,6 +110,7 @@ polygon = PoolVector2Array( -128, 128, 128, 128, 128.672, -100.331, 95.7036, -12
 
 [node name="curve_bottom_right" type="Sprite" parent="."]
 editor/display_folded = true
+light_mask = 2
 position = Vector2( 520, 264 )
 texture = ExtResource( 3 )
 
@@ -118,7 +121,8 @@ polygon = PoolVector2Array( -128, -128, 128, -128, 128.672, 101.728, 95.7036, 12
 
 [node name="curve_bottom_left" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 256, 264 )
+light_mask = 2
+position = Vector2( 270, 264 )
 texture = ExtResource( 4 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="curve_bottom_left"]
@@ -128,6 +132,7 @@ polygon = PoolVector2Array( 128, -128, 128, 128, -97.769, 128.343, -128, 104, -1
 
 [node name="join_bottom_left" type="Sprite" parent="."]
 editor/display_folded = true
+light_mask = 2
 position = Vector2( 784, 264 )
 texture = ExtResource( 5 )
 
@@ -138,6 +143,7 @@ shape = SubResource( 1 )
 
 [node name="join_bottom_right" type="Sprite" parent="."]
 editor/display_folded = true
+light_mask = 2
 position = Vector2( 1048, 264 )
 texture = ExtResource( 6 )
 
@@ -148,6 +154,7 @@ shape = SubResource( 2 )
 
 [node name="join_top_left" type="Sprite" parent="."]
 editor/display_folded = true
+light_mask = 2
 position = Vector2( 784, 0 )
 texture = ExtResource( 7 )
 
@@ -158,6 +165,7 @@ shape = SubResource( 3 )
 
 [node name="join_top_right" type="Sprite" parent="."]
 editor/display_folded = true
+light_mask = 2
 position = Vector2( 1048, 0 )
 texture = ExtResource( 8 )
 
@@ -167,6 +175,8 @@ texture = ExtResource( 8 )
 shape = SubResource( 4 )
 
 [node name="left_full_slope" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 256, 528 )
 texture = ExtResource( 9 )
 
@@ -176,6 +186,8 @@ texture = ExtResource( 9 )
 polygon = PoolVector2Array( -128, 128, 128, 128, 128, -128 )
 
 [node name="left_half_end_slope" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 256, 792 )
 texture = ExtResource( 10 )
 
@@ -185,6 +197,8 @@ texture = ExtResource( 10 )
 polygon = PoolVector2Array( -128, 128, 128, 128, 128, 0 )
 
 [node name="left_half_start_slope" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 520, 792 )
 texture = ExtResource( 11 )
 
@@ -194,6 +208,8 @@ texture = ExtResource( 11 )
 polygon = PoolVector2Array( -128, 128, 128, 128, 128, -128, -128, 0 )
 
 [node name="right_half_end_slope" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 520, 1056 )
 texture = ExtResource( 12 )
 
@@ -203,6 +219,8 @@ texture = ExtResource( 12 )
 polygon = PoolVector2Array( -128, 128, 128, 128, -128, 0 )
 
 [node name="right_half_start_slope" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 256, 1056 )
 texture = ExtResource( 13 )
 
@@ -212,6 +230,8 @@ texture = ExtResource( 13 )
 polygon = PoolVector2Array( 128, 128, -128, 128, -128, -128, 128, 0 )
 
 [node name="side_bottom_left" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 784, 528 )
 texture = ExtResource( 14 )
 
@@ -221,6 +241,8 @@ texture = ExtResource( 14 )
 shape = SubResource( 5 )
 
 [node name="side_bottom_join" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 1048, 528 )
 texture = ExtResource( 15 )
 
@@ -230,6 +252,8 @@ texture = ExtResource( 15 )
 shape = SubResource( 6 )
 
 [node name="side_bottom_right" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 1312, 528 )
 texture = ExtResource( 16 )
 
@@ -239,6 +263,8 @@ texture = ExtResource( 16 )
 shape = SubResource( 7 )
 
 [node name="side_top_left" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 784, 792 )
 texture = ExtResource( 17 )
 
@@ -248,6 +274,8 @@ texture = ExtResource( 17 )
 shape = SubResource( 8 )
 
 [node name="side_top_join" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 1048, 792 )
 texture = ExtResource( 18 )
 
@@ -257,6 +285,8 @@ texture = ExtResource( 18 )
 shape = SubResource( 9 )
 
 [node name="side_top_right" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 1312, 792 )
 texture = ExtResource( 19 )
 
@@ -266,6 +296,8 @@ texture = ExtResource( 19 )
 shape = SubResource( 10 )
 
 [node name="side_top" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 1312, 264 )
 texture = ExtResource( 20 )
 
@@ -275,6 +307,8 @@ texture = ExtResource( 20 )
 shape = SubResource( 11 )
 
 [node name="center_split_right" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 1048, 1056 )
 texture = ExtResource( 21 )
 
@@ -284,6 +318,8 @@ texture = ExtResource( 21 )
 shape = SubResource( 12 )
 
 [node name="center_split_left" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 784, 1056 )
 texture = ExtResource( 22 )
 
@@ -293,6 +329,8 @@ texture = ExtResource( 22 )
 shape = SubResource( 13 )
 
 [node name="center_left" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 1576, 264 )
 texture = ExtResource( 23 )
 
@@ -302,6 +340,8 @@ texture = ExtResource( 23 )
 shape = SubResource( 14 )
 
 [node name="center" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 1576, 528 )
 texture = ExtResource( 24 )
 
@@ -311,6 +351,8 @@ texture = ExtResource( 24 )
 shape = SubResource( 15 )
 
 [node name="center_right" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 1312, 1056 )
 texture = ExtResource( 25 )
 
@@ -320,6 +362,8 @@ texture = ExtResource( 25 )
 shape = SubResource( 16 )
 
 [node name="side_right" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 1576, 0 )
 texture = ExtResource( 26 )
 
@@ -329,6 +373,8 @@ texture = ExtResource( 26 )
 shape = SubResource( 17 )
 
 [node name="side_left" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 1312, 0 )
 texture = ExtResource( 27 )
 
@@ -338,6 +384,8 @@ texture = ExtResource( 27 )
 shape = SubResource( 18 )
 
 [node name="right_full_slope" type="Sprite" parent="."]
+editor/display_folded = true
+light_mask = 2
 position = Vector2( 520, 528 )
 texture = ExtResource( 28 )
 
