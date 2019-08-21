@@ -18,9 +18,15 @@ The objective of this game is to collect all coins in the level without being ca
 ## Features
 
 1. Moving and Jumping character
+
+![idle](./img/player/idle.gif =200x200)
+![walk](./img/player/walk.gif =200x200)
+![jump](./img/player/jump.gif =200x200)
+
+
 2. Screen moving along the character
-3. End game objective
-4. Enemies with movement pattern
+3. End game objective (Still pending)
+4. Enemies with movement pattern (Still pending)
 
 ## Known Issues
 
