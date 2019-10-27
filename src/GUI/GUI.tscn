@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GUI/Font.tres" type="DynamicFont" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Hidden"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Show"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="PlayerDetected" type="Label" parent="."]
+visible = false
+margin_left = 172.95
+margin_top = 574.639
+margin_right = 1732.95
+margin_bottom = 634.639
+custom_fonts/font = ExtResource( 1 )
+text = "The Player has been detected"
+
+[node name="State" type="AnimationPlayer" parent="PlayerDetected"]
+anims/Hidden = SubResource( 1 )
+anims/Show = SubResource( 2 )
+
+[node name="Coins" type="Control" parent="."]
+margin_left = 15.0
+margin_top = 15.0
+
+[node name="CoinsLabel" type="Label" parent="Coins"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 276.0
+margin_bottom = 66.0
+custom_fonts/font = ExtResource( 1 )
+text = "Coins"
+uppercase = true
+
+[node name="Value" type="Label" parent="Coins/CoinsLabel"]
+margin_left = 288.942
+margin_right = 348.942
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"

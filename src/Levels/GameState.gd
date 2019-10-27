@@ -19,4 +19,8 @@ func _end_game():
 func _start_game():
 	self.coins = 0
 	$GUI/PlayerDetected/State.play("Hidden")
-	
+
+func _input(event):
+	if event is InputEventKey:
+		if Input.is_action_just_pressed("menu"):
+			get_tree().quit()
